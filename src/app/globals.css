@@ -18,10 +18,73 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #01061C;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.anim {
+  width: 100vw;
+  height: 100vh;
+  background-color: #180B45;
+}
+
+.custom-bullet {
+  background-color: aliceblue
+}
+
+.custom-bullet-active {
+  background-color: aliceblue;
+}
+
+.test::after {
+  content: 'ssssssssssss';
+  background-color: #180B45;
+  position: relative;
+  width: 100px !important;
+  height: 100px !important;
+
+
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  background: url('/path-to-image.jpg') no-repeat center center/cover;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card.hovered {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card.hovered .overlay {
+  opacity: 1;
+}
+
+.aa::after {
+  content: 'ww';
+  background-color: #2acb3d;
 }
