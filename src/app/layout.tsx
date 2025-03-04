@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Asal Razavi Zadeh | Frontend Developer',
     description: 'Explore Asal RazaviZadeh’s portfolio, showcasing frontend projects built with React, Next.js, and TypeScript.',
-    url: 'https://your-portfolio-url.com/en',
+    url: 'https://asalrazavizadeh.me',
     siteName: 'Asal RazaviZadeh | Portfolio',
     images: [
       {
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://your-portfolio-url.com/en',
+    canonical: 'https://asalrazavizadeh.me',
     languages: {
-      'fa': 'https://your-portfolio-url.com/fa',
-      'en': 'https://your-portfolio-url.com/en',
+      'fa': 'https://asalrazavizadeh.me',
+      'en': 'https://asalrazavizadeh.me',
     },
   },
   twitter: {

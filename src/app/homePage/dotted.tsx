@@ -117,7 +117,7 @@ const Dotted = ({cameraConfig}:any) => {
       }
       
     return (
-    <Canvas camera={cameraConfig} id='To_Top'>
+    <Canvas camera={cameraConfig}>
                 <ambientLight intensity={0.5} />
                 <MovingDots />
                 <CameraAnimation />

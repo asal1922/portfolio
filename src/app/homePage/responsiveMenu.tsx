@@ -46,7 +46,7 @@ const ResponsiveMenu = () => {
                         <a href="#contact">Contact</a>
                     </p>
                     <p className='w-full hover:text-gray-500  cursor-pointer hover:bg-black/50 transition-all duration-400 ease-in-out text-center rounded-md p-3'>
-                        <a href='https://t.me/asal1922'>Github</a>
+                        <a href='https://github.com/asal1922'>Github</a>
                     </p>
                     <p className='w-full hover:text-gray-500  cursor-pointer hover:bg-black/50 transition-all duration-400 ease-in-out text-center rounded-md p-3'>
                         <a href='https://t.me/asal1922'>Telegeram</a>

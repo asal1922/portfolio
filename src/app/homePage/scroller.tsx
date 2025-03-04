@@ -13,7 +13,7 @@ const Scroller = () => {
                     <a href="#contact">Contact</a>
                 </p>
                 <p className='w-full cursor-pointer hover:text-gray-400 transition-all duration-400 ease-in-out text-center p-2 text-sm'>
-                    <a href="#To_Top" className='bg-sky-900 rounded-full px-2 py-1'>⇧</a>
+                    <a href="#portfolio" className='bg-sky-900 rounded-full px-2 py-1'>⇧</a>
                 </p>
             </div>
         </div>
