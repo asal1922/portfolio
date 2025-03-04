@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
+import { toast, ToastContainer } from 'react-toastify';
 
 const EmailForm = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -8,6 +9,7 @@ const EmailForm = () => {
         emailjs.send('service_6ndcgcw', 'template_b2c2xka', data, 'VgGZ4hjmRqEGgw8Vt')
             .then((response) => {
                 console.log('Message sent', response);
+                      toast.success('sent');
             })
             .catch((err) => {
                 console.error('Failed to send message', err);
@@ -68,6 +70,8 @@ const EmailForm = () => {
                     Send Message
                 </button>
             </div>
+          <ToastContainer />
+
         </form>
     );
 };
