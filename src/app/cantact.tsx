@@ -29,17 +29,17 @@ const Cantact = () => {
                             height={240}
                         />
                     </div>
-                    <div className='flex flex-col gap-8 laptop-position '>
+                    <div className='flex flex-col gap-8 laptop-position'>
                         <h3 className='text-transparent bg-clip-text bg-blue-gradient font-semibold text-xl max-xl:text-sm'>ASAL RAZAVIZADEH</h3>
-                        <h3>front-end developer</h3>
+                        <h3 className='text-white'>front-end developer</h3>
                         <p className='text-gray-400'>im available for freelance work. connect with mevia and callin to my account.</p>
                         <div className='flex gap-2'>
                             <p className='text-gray-400'>Phone:</p>
-                            <p>+98-9156115755</p>
+                            <p className='text-white'>+98-9156115755</p>
                         </div>
                         <div className='flex gap-2'>
                             <p className='text-gray-400'>Email:</p>
-                            <p>asalrazavi2002@gmail.com</p>
+                            <p className='text-white'>asalrazavi2002@gmail.com</p>
                         </div>
                     </div>
                 </div>

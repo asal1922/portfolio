@@ -161,7 +161,7 @@ const Skills = () => {
         />
 
       </div>
-      <div className='md:hidden mx-10'>
+      <div className='md:hidden my-32 mx-10'>
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={4}
@@ -186,7 +186,7 @@ const Skills = () => {
                 width={140}
                 height={145}
               />
-              <p>HTML</p>
+              <p className=' text-white'>HTML</p>
               <div className="container w-1/2 border border-blue-600  rounded-3xl bg-html-gradient p-1">
               </div>
             </div>
@@ -201,7 +201,7 @@ const Skills = () => {
                 height={145}
 
               />
-              <p>CSS</p>
+              <p className=' text-white'>CSS</p>
               <div className="container w-1/2 border border-blue-600 bg-html-gradient p-1 rounded-3xl">
               </div>
             </div>
@@ -216,7 +216,7 @@ const Skills = () => {
                 height={145}
 
               />
-              <p>JS</p>
+              <p className=' text-white'>JS</p>
               <div className="container w-1/2 border border-pink-600 bg-js-gradient p-1 rounded-3xl">
               </div>
             </div>
@@ -231,7 +231,7 @@ const Skills = () => {
                 height={145}
 
               />
-              <p>REACT</p>
+              <p className=' text-white'>REACT</p>
               <div className="container w-1/2 border border-yellow-600 bg-react-gradient rounded-3xl p-1">
               </div>
             </div>
@@ -246,7 +246,7 @@ const Skills = () => {
                 height={145}
 
               />
-              <p>TYPESCRIPT</p>
+              <p className=' text-white'>TYPESCRIPT</p>
               <div className="container w-1/2 border border-blue-600 rounded-3xl bg-html-gradient p-1">
               </div>
             </div>
@@ -260,7 +260,7 @@ const Skills = () => {
                 width={120}
                 height={145}
               />
-              <p>TAILWIND</p>
+              <p className=' text-white'>TAILWIND</p>
               <div className="container w-1/2 border border-blue-600 rounded-3xl bg-tailwind-gradient p-1">
               </div>
             </div>
@@ -275,7 +275,7 @@ const Skills = () => {
                 height={145}
 
               />
-              <p>GIT</p>
+              <p className=' text-white'>GIT</p>
               <div className="container w-1/2 border border-yellow-600 rounded-3xl bg-git-gradient p-1">
               </div>
             </div>
@@ -289,7 +289,7 @@ const Skills = () => {
                 width={120}
                 height={145}
               />
-              <p>NEXT JS</p>
+              <p className=' text-white'>NEXT JS</p>
               <div className="container w-1/2 border border-green-600 rounded-3xl bg-next-gradient p-1">
               </div>
             </div>
@@ -304,7 +304,7 @@ const Skills = () => {
                 height={145}
 
               />
-              <p>RESTFUL API</p>
+              <p className=' text-white'>RESTFUL API</p>
               <div className="container w-1/2 border border-blue-600 rounded-3xl bg-html-gradient p-1">
               </div>
             </div>

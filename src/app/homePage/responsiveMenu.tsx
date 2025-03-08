@@ -37,28 +37,28 @@ const ResponsiveMenu = () => {
                 </div>
                 <div className="flex flex-col justify-between gap-8 items-center">
                     <p className=' w-full hover:bg-black/50 transition-all duration-400 ease-in-out text-center rounded-md p-3'>
-                        <a href="#skills">Skills</a>
+                        <a href="#skills" className='text-white'>Skills</a>
                     </p>
                     <p className='w-full hover:bg-black/50 transition-all duration-400 ease-in-out text-center rounded-md p-3'>
-                        <a href="#projects">Projects</a>
+                        <a href="#projects" className='text-white'>Projects</a>
                     </p>
                     <p className='w-full hover:bg-black/50 transition-all duration-400 ease-in-out text-center rounded-md p-3'>
-                        <a href="#contact">Contact</a>
+                        <a href="#contact" className='text-white'>Contact</a>
                     </p>
                     <p className='w-full hover:text-gray-500  cursor-pointer hover:bg-black/50 transition-all duration-400 ease-in-out text-center rounded-md p-3'>
-                        <a href='https://github.com/asal1922'>Github</a>
+                        <a href='https://github.com/asal1922' className='text-white'>Github</a>
                     </p>
                     <p className='w-full hover:text-gray-500  cursor-pointer hover:bg-black/50 transition-all duration-400 ease-in-out text-center rounded-md p-3'>
-                        <a href='https://t.me/asal1922'>Telegeram</a>
+                        <a href='https://t.me/asal1922' className='text-white'>Telegeram</a>
                     </p>
                     <p className='w-full hover:text-gray-500  cursor-pointer hover:bg-black/50 transition-all duration-400 ease-in-out text-center rounded-md p-3'>
-                        <a href="https://www.linkedin.com/in/asal-razavizadeh" target="_blank">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/asal-razavizadeh" target="_blank" className='text-white'>LinkedIn</a>
                     </p>
 
                     <p className='w-full hover:text-gray-500  cursor-pointer hover:bg-black/50 transition-all duration-400 ease-in-out text-center rounded-md p-3'>
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=asalrazavizadeh2002@gmail.com">Email</a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=asalrazavizadeh2002@gmail.com" className='text-white'>Email</a>
                     </p>
-                    <p className="!text-sm text-white bg-black/50 w-full p-4 text-center" onClick={() => handleCopyToClipboard(email)}>asalrazavizadeh2002@gmail.com</p>
+                    <p className="!text-sm text-white bg-black/50 w-full p-4 text-center className='text-white'" onClick={() => handleCopyToClipboard(email)}>asalrazavizadeh2002@gmail.com</p>
                 </div>
             </div>
             <ToastContainer />
