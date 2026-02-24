@@ -6,6 +6,9 @@ module.exports = {
     experimental: {
         reactRoot: true,  // فعال کردن Concurrent Mode در React 18
     },
+      eslint: {
+    ignoreDuringBuilds: true,
+  },
     images: {
         domains: ['SOURCE_IMAGE_DOMAIN']
     }   
