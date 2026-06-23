@@ -39,16 +39,16 @@ const Home: React.FC = () => {
   useEffect(() => {
     const handleLoad = () => {
       setCurrentImage(images.wellcome);
-      setTimeout(() => setFadeOut(true), 3000);
-      setTimeout(() => setShowMainContent(true), 6000);
+      setTimeout(() => setFadeOut(true), 2000);
+      setTimeout(() => setShowMainContent(true), 3000);
     };
 
     const handleResize = () => {
       setShowMainContent(false);
       setFadeOut(false);
       setCurrentImage(images.loading);
-      setTimeout(() => setFadeOut(true), 2500);
-      setTimeout(() => setShowMainContent(true), 3500);
+      setTimeout(() => setFadeOut(true), 1500);
+      setTimeout(() => setShowMainContent(true), 2500);
     };
     if (document.readyState === "complete") {
       handleLoad();

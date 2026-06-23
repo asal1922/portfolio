@@ -6,11 +6,11 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Asal RazaviZadeh | Frontend Developer',
-  description: 'Portfolio of Asal RazaviZadeh, a Frontend Developer specializing in React, Next.js, and TypeScript.',
-  keywords: 'Asal RazaviZadeh, Frontend Developer, React, Next.js, TypeScript, Tailwind CSS, Portfolio, Web Development',
+  description: 'Portfolio of Asal RazaviZadeh, a Frontend Developer with 2 years of professional experience at Ferdowsi Cloud and a 1-month full-time internship. Specializing in React, Next.js, and TypeScript.',
+  keywords: 'Asal RazaviZadeh, Frontend Developer, React, Next.js, TypeScript, Tailwind CSS, Portfolio, Web Development, Ferdowsi Cloud',
   openGraph: {
-    title: 'Asal Razavi Zadeh | Frontend Developer',
-    description: 'Explore Asal RazaviZadeh’s portfolio, showcasing frontend projects built with React, Next.js, and TypeScript.',
+    title: 'Asal RazaviZadeh | Frontend Developer',
+    description: 'Frontend Developer with 2 years of experience at Ferdowsi Cloud Computing Company and a 1-month full-time internship. Explore my portfolio built with React, Next.js, and TypeScript.',
     url: 'https://asalrazavizadeh.me',
     siteName: 'Asal RazaviZadeh | Portfolio',
     images: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Asal RazaviZadeh | Frontend Developer',
-    description: 'Check out my portfolio and discover my frontend development projects.',
+    description: 'Frontend Developer with 2 years at Ferdowsi Cloud & 1-month full-time internship. Check out my portfolio and frontend projects.',
     site: '@yourTwitterHandle',
     images: ['https://56272d65c8.imgdist.com/pub/bfra/ude6fbl4/j8g/f93/usb/3D%20Modelling%202.gif'],
   },

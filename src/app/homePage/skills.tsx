@@ -1,319 +1,151 @@
-import Image from 'next/image';
-import images from '@/assets/images';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+"use client";
+import { useState } from "react";
+import Image from "next/image";
+import images from "@/assets/images";
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules';
+type Skill = {
+  name: string;
+  image: any;
+};
+
+type SkillCategory = {
+  title: string;
+  icon: string;
+  skills: Skill[];
+};
+
+const skillCategories: SkillCategory[] = [
+  {
+    title: "Core",
+    icon: "⚡",
+    skills: [
+      { name: "JavaScript", image: images.js },
+      { name: "TypeScript", image: images.typeScript },
+      { name: "React", image: images.react },
+      { name: "Next.js", image: images.nextJs },
+      { name: "React Three Fiber", image: images.reactThreeFiber },
+      { name: "Mapbox", image: images.mapBox },
+    ],
+  },
+  {
+    title: "State Management",
+    icon: "🗂️",
+    skills: [
+      { name: "Redux", image: images.redux },
+      { name: "Redux Thunk", image: images.reduxThunk },
+      { name: "Zustand", image: images.zustand },
+      { name: "React Query", image: images.reactQuery },
+    ],
+  },
+  {
+    title: "API & Real-Time",
+    icon: "🔌",
+    skills: [
+      { name: "Axios", image: images.axios },
+      { name: "REST API", image: images.rest },
+      { name: "WebSocket", image: images.webSocket },
+    ],
+  },
+  {
+    title: "UI & Styling",
+    icon: "🎨",
+    skills: [
+      { name: "Tailwind CSS", image: images.tailwind },
+      { name: "shadcn/ui", image: images.shadcn },
+      { name: "Material UI", image: images.mui },
+    ],
+  },
+  {
+    title: "Tools",
+    icon: "🛠️",
+    skills: [
+      { name: "Git", image: images.git },
+      { name: "Linux", image: images.linux },
+      { name: "Docker", image: images.docker },
+    ],
+  },
+];
+
+const SkillCard = ({ name, image }: Skill) => (
+  <div className="skill-card flex flex-col items-center gap-3 cursor-pointer group">
+    <div className="skill-icon-wrapper relative w-20 h-20 flex items-center justify-center  transition-all duration-300  group-hover:-translate-y-1">
+      <Image
+        src={image}
+        alt={name}
+        width={80}
+        height={80}
+        unoptimized
+        className="object-contain !w-20 !h-20 shadow transition-transform duration-300 group-hover:scale-110 rounded-xl border-2 border-blue-500"
+      />
+    </div>
+    <p className="text-xs text-gray-500 text-center leading-tight tracking-wide group-hover:text-blue-300 transition-colors duration-300">
+      {name}
+    </p>
+  </div>
+);
+
 const Skills = () => {
+  const [activeTab, setActiveTab] = useState(0);
+
+  const active = skillCategories[activeTab];
+
   return (
-    <>
-      <div className='w-full flex justify-center flex-col items-center mt-20 mix-blend-plus-lighter max-md:hidden'>
-        <div className='w-full justify-center items-center'>
-          <div className='w-full flex justify-center items-center flex-col gap-6'>
-            <p className='text-blue-400 text-lg'>SKILLS</p>
-            <p className='text-white font-semibold text-5xl'>TOOLS I USE</p>
-            <p className='text-gray-400 text-xl'>primary skills on</p>
-          </div>
-        </div>
-        <div className='flex gap-4 flex-wrap justify-center items-center w-1/2 !z-50 !mix-blend-color-dodge'>
-
-          <div className='flex flex-col justify-center items-center gap-2 !z-50'>
-            <Image
-              unoptimized={true}
-              src={images.html}
-              alt="My Animated GIF"
-              width={120}
-              height={145}
-            />
-            <p>HTML</p>
-            <div className="container w-full border border-blue-600  rounded-3xl bg-html-gradient p-1">
-            </div>
-          </div>
-          <div className='flex flex-col justify-center items-center gap-2'>
-            <Image
-              unoptimized={true}
-              src={images.css}
-              alt="My Animated GIF"
-              width={120}
-              height={145}
-
-            />
-            <p>CSS</p>
-            <div className="container w-full border border-blue-600 bg-html-gradient p-1 rounded-3xl">
-            </div>
-          </div>
-          <div className='flex flex-col justify-center items-center gap-2'>
-            <Image
-              unoptimized={true}
-              src={images.js}
-              alt="My Animated GIF"
-              width={120}
-              height={145}
-
-            />
-            <p>JS</p>
-            <div className="container w-full border border-pink-600 bg-js-gradient p-1 rounded-3xl">
-            </div>
-          </div>
-          <div className='flex flex-col justify-center items-center gap-2'>
-            <Image
-              unoptimized={true}
-              src={images.react}
-              alt="My Animated GIF"
-              width={120}
-              height={145}
-
-            />
-            <p>REACT</p>
-            <div className="container w-full border border-yellow-600 bg-react-gradient rounded-3xl p-1">
-            </div>
-          </div>
-          <div className='flex flex-col justify-center items-center gap-2'>
-            <Image
-              unoptimized={true}
-              src={images.typeScript}
-              alt="My Animated GIF"
-              width={120}
-              height={145}
-
-            />
-            <p>TYPESCRIPT</p>
-            <div className="container w-full border border-blue-600 rounded-3xl bg-html-gradient p-1">
-            </div>
-          </div>
-          <div className='flex flex-col justify-center items-center gap-2'>
-            <Image
-              unoptimized={true}
-              src={images.tailwind}
-              alt="My Animated GIF"
-              width={120}
-              height={145}
-            />
-            <p>TAILWIND</p>
-            <div className="container w-full border border-blue-600 rounded-3xl bg-tailwind-gradient p-1">
-            </div>
-          </div>
-          <div className='flex flex-col justify-center items-center gap-2'>
-            <Image
-              unoptimized={true}
-              src={images.reactfiber}
-              alt="My Animated GIF"
-              width={120}
-              height={145}
-
-            />
-            <p>REACTFIBER</p>
-            <div className="container w-full border border-pink-600 rounded-3xl bg-reactfiber-gradient p-1">
-            </div>
-          </div>
-          <div className='flex flex-col justify-center items-center gap-2'>
-            <Image
-              unoptimized={true}
-              src={images.git}
-              alt="My Animated GIF"
-              width={120}
-              height={145}
-
-            />
-            <p>GIT</p>
-            <div className="container w-full border border-yellow-600 rounded-3xl bg-git-gradient p-1">
-            </div>
-          </div>
-          <div className='flex flex-col justify-center items-center gap-2'>
-            <Image
-              unoptimized={true}
-              src={images.next}
-              alt="My Animated GIF"
-              width={120}
-              height={145}
-            />
-            <p>NEXT JS</p>
-            <div className="container w-full border border-green-600 rounded-3xl bg-next-gradient p-1">
-            </div>
-          </div>
-          <div className='flex flex-col justify-center items-center gap-2'>
-            <Image
-              unoptimized={true}
-              src={images.api}
-              alt="My Animated GIF"
-              width={120}
-              height={145}
-
-            />
-            <p>RESTFUL API</p>
-            <div className="container w-full border border-blue-600 rounded-3xl bg-html-gradient p-1">
-            </div>
-          </div>
-        </div>
-
-        <Image
-          unoptimized={true}
-          className=' relative left-0 top-[-550px] !z-20 opacity-45 rotate-90'
-          src='https://56272d65c8.imgdist.com/pub/bfra/ude6fbl4/k5g/zs7/b6y/Background%20Pattern%201.gif'
-          alt="My Animated GIF"
-          width={120}
-          height={145}
-        />
-
+    <section className="w-full py-20 px-4 flex flex-col items-center gap-12">
+      <div className="text-center space-y-3">
+        <p className="text-blue-400 text-xs tracking-[0.25em] uppercase font-medium">Skills</p>
+        <h1 className="text-2xl md:text-4xl font-semibold text-white">
+          Tools &amp; Technologies I Use
+        </h1>
+        <p className="text-gray-500 text-sm">Technologies I work with in real projects</p>
       </div>
-      <div className='md:hidden my-32 mx-10'>
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={4}
-          slidesPerView={1}
-          navigation
-          pagination={{
-            clickable: true,
-            bulletClass: "custom-bullet",
-            bulletActiveClass: "custom-bullet-active",
-          }}
-          scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log('slide change')}
 
+      <div className="w-full max-w-3xl">
+        <div className="flex flex-wrap justify-center gap-2">
+          {skillCategories.map((cat, i) => (
+            <button
+              key={cat.title}
+              onClick={() => setActiveTab(i)}
+              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 border
+                ${activeTab === i
+                  ? "bg-blue-500/15 border-blue-400/50 text-blue-300 shadow-[0_0_14px_2px_rgba(96,165,250,0.2)]"
+                  : "bg-white/5 border-white/5 text-gray-400 hover:bg-white/10 hover:text-gray-200 hover:border-white/15"
+                }`}
+            >
+              <span>{cat.icon}</span>
+              <span>{cat.title}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="w-full max-w-3xl">
+        <div
+          key={active.title}
+          className="animate-fade-in flex flex-wrap gap-6 justify-center"
         >
-          <SwiperSlide>
-            <div className='flex flex-col justify-center items-center gap-2 !z-50'>
-              <Image
-                unoptimized={true}
-                src={images.html}
-                alt="My Animated GIF"
-                width={140}
-                height={145}
-              />
-              <p className=' text-white'>HTML</p>
-              <div className="container w-1/2 border border-blue-600  rounded-3xl bg-html-gradient p-1">
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className='flex flex-col justify-center items-center gap-2'>
-              <Image
-                unoptimized={true}
-                src={images.css}
-                alt="My Animated GIF"
-                width={120}
-                height={145}
-
-              />
-              <p className=' text-white'>CSS</p>
-              <div className="container w-1/2 border border-blue-600 bg-html-gradient p-1 rounded-3xl">
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className='flex flex-col justify-center items-center gap-2'>
-              <Image
-                unoptimized={true}
-                src={images.js}
-                alt="My Animated GIF"
-                width={120}
-                height={145}
-
-              />
-              <p className=' text-white'>JS</p>
-              <div className="container w-1/2 border border-pink-600 bg-js-gradient p-1 rounded-3xl">
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className='flex flex-col justify-center items-center gap-2'>
-              <Image
-                unoptimized={true}
-                src={images.react}
-                alt="My Animated GIF"
-                width={120}
-                height={145}
-
-              />
-              <p className=' text-white'>REACT</p>
-              <div className="container w-1/2 border border-yellow-600 bg-react-gradient rounded-3xl p-1">
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className='flex flex-col justify-center items-center gap-2'>
-              <Image
-                unoptimized={true}
-                src={images.typeScript}
-                alt="My Animated GIF"
-                width={120}
-                height={145}
-
-              />
-              <p className=' text-white'>TYPESCRIPT</p>
-              <div className="container w-1/2 border border-blue-600 rounded-3xl bg-html-gradient p-1">
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className='flex flex-col justify-center items-center gap-2'>
-              <Image
-                unoptimized={true}
-                src={images.tailwind}
-                alt="My Animated GIF"
-                width={120}
-                height={145}
-              />
-              <p className=' text-white'>TAILWIND</p>
-              <div className="container w-1/2 border border-blue-600 rounded-3xl bg-tailwind-gradient p-1">
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className='flex flex-col justify-center items-center gap-2'>
-              <Image
-                unoptimized={true}
-                src={images.git}
-                alt="My Animated GIF"
-                width={120}
-                height={145}
-
-              />
-              <p className=' text-white'>GIT</p>
-              <div className="container w-1/2 border border-yellow-600 rounded-3xl bg-git-gradient p-1">
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className='flex flex-col justify-center items-center gap-2'>
-              <Image
-                unoptimized={true}
-                src={images.next}
-                alt="My Animated GIF"
-                width={120}
-                height={145}
-              />
-              <p className=' text-white'>NEXT JS</p>
-              <div className="container w-1/2 border border-green-600 rounded-3xl bg-next-gradient p-1">
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className='flex flex-col justify-center items-center gap-2'>
-              <Image
-                unoptimized={true}
-                src={images.api}
-                alt="My Animated GIF"
-                width={120}
-                height={145}
-
-              />
-              <p className=' text-white'>RESTFUL API</p>
-              <div className="container w-1/2 border border-blue-600 rounded-3xl bg-html-gradient p-1">
-              </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
+          {active.skills.map((skill) => (
+            <SkillCard key={skill.name} {...skill} />
+          ))}
+        </div>
       </div>
 
-    </>
+      <style jsx>{`
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fade-in {
+          animation: fade-in 0.3s ease forwards;
+        }
+      `}</style>
+    </section>
+  );
+};
 
-  )
-}
 export default Skills;

@@ -1,18 +1,25 @@
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
 import { toast, ToastContainer } from 'react-toastify';
 
 const EmailForm = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const [isLoading, setIsLoading] = useState(false);
 
     const onSubmit = (data: any) => {
+        setIsLoading(true);
         emailjs.send('service_6ndcgcw', 'template_b2c2xka', data, 'VgGZ4hjmRqEGgw8Vt')
             .then((response) => {
                 console.log('Message sent', response);
-                      toast.success('sent');
+                toast.success('sent');
             })
             .catch((err) => {
                 console.error('Failed to send message', err);
+                toast.error('Failed to send message');
+            })
+            .finally(() => {
+                setIsLoading(false);
             });
     };
 
@@ -66,12 +73,30 @@ const EmailForm = () => {
                     {errors.description && <span className="text-red-500">Message is required</span>}
                 </div>
 
-                <button type="submit" className="px-6 py-4 text-gray-300 bg-[#041226] rounded-lg w-full hover:bg-blue-950 transition-all duration-[300ms] ease-in-out hover:text-gray-100">
-                    Send Message
+                <button
+                    type="submit"
+                    disabled={isLoading}
+                    className="px-6 py-4 text-gray-300 bg-[#041226] rounded-lg w-full hover:bg-blue-950 transition-all duration-[300ms] ease-in-out hover:text-gray-100 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                >
+                    {isLoading ? (
+                        <>
+                            <svg
+                                className="animate-spin h-5 w-5 text-gray-300"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                            >
+                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+                            </svg>
+                            Sending...
+                        </>
+                    ) : (
+                        'Send Message'
+                    )}
                 </button>
             </div>
-          <ToastContainer />
-
+            <ToastContainer />
         </form>
     );
 };

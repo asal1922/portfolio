@@ -5,17 +5,19 @@ const Profile = () => {
         <div className="relative w-full">
             <h1 className="absolute top-[-550px] max-xl:!top-[-55vh] left-[45%] w-1/2 max-xl:!w-3/4 max-xl:!left-[12%] 3xl:top-[-70vh] top-text">
                 <p className="text-gray-400 text-2xl max-xl:text-base max-md:text-sm bg-blur-background border rounded-lg border-sky-500/35 p-9 top-text">
-                    HI , Im
+                    Hi, I&apos;m
                     <span className="text-transparent bg-clip-text bg-blue-gradient font-semibold text-4xl max-xl:text-xl px-1 top-text">
                         Asal Razavizadeh
                     </span>
-                    Im
-                    <span className="text-white font-semibold text-2xl max-xl:text-base max-md:text-sm top-text pa-1"> Front-end Developer</span>, Im Computer Engineering
-                    Student At Islamic Azad University Of Mashhad With A
-                    <span className="text-white font-semibold text-2xl max-xl:text-base max-md:text-sm top-text"> Strong Foundation</span> In Front-end Development.
-                    Over A Year Of Hands-On Experience At Ferdowsi Cloud Company , Speciaizing In
-                    <span className="text-white font-semibold text-2xl max-xl:text-base max-md:text-sm top-text"> Creating Responsive</span> and User-Freindly Web
-                    Applications .
+                    , a
+                    <span className="text-white font-semibold text-2xl max-xl:text-base max-md:text-sm top-text"> Front-End Developer</span> with
+                    <span className="text-white font-semibold text-2xl max-xl:text-base max-md:text-sm top-text"> 2 years</span> at Ferdowsi Cloud
+                    and a <span className="text-white font-semibold text-2xl max-xl:text-base max-md:text-sm top-text">1-month full-time internship</span> at
+                    <span className="text-white font-semibold text-2xl max-xl:text-base max-md:text-sm top-text"> Neshoon</span> routing platform.
+                    Computer Engineering student at IAU Mashhad, specializing in
+                    <span className="text-white font-semibold text-2xl max-xl:text-base max-md:text-sm top-text"> responsive</span> and
+                    <span className="text-white font-semibold text-2xl max-xl:text-base max-md:text-sm top-text"> user-friendly</span> web apps
+                    with React, Next.js, and TypeScript.
                 </p>
             </h1>
             <div className="absolute top-[-600px] left-[8%] flex max-xl:justify-center w-full max-xl:left-0 max-xl:top-[-90vh] 3xl:top-[-80vh] top-picture top-text-cumputer">

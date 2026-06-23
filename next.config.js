@@ -2,9 +2,8 @@
 const nextConfig = {}
 
 module.exports = {
-    reactStrictMode: true,  // فعال کردن حالت strict برای پیدا کردن خطاها
+    reactStrictMode: true, 
     experimental: {
-        reactRoot: true,  // فعال کردن Concurrent Mode در React 18
     },
       eslint: {
     ignoreDuringBuilds: true,
