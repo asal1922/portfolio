@@ -23,7 +23,7 @@ import reactQuery from '@/assets/reactQuery.png';
 import webSocket from '@/assets/webSocket.png';
 import zustand from '@/assets/zustand.png';
 import axios from '@/assets/axios.png';
-import mapBox from '@/assets/mapBox.png';
+import mapBox from '@/assets/mapbox.png';
 import reduxThunk from '@/assets/reduxThunk.png';
 import rest from '@/assets/rest.png';
 import reactThreeFiber from '@/assets/reactThreeFiber.png';
