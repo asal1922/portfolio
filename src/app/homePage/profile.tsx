@@ -13,7 +13,7 @@ const Profile = () => {
                     <span className="text-white font-semibold text-2xl max-xl:text-base max-md:text-sm top-text"> Front-End Developer</span> with
                     <span className="text-white font-semibold text-2xl max-xl:text-base max-md:text-sm top-text"> 2 years</span> at Ferdowsi Cloud
                     and a <span className="text-white font-semibold text-2xl max-xl:text-base max-md:text-sm top-text">1-month full-time internship</span> at
-                    <span className="text-white font-semibold text-2xl max-xl:text-base max-md:text-sm top-text"> Neshoon</span> routing platform.
+                    <span className="text-white font-semibold text-2xl max-xl:text-base max-md:text-sm top-text"> Neshan</span> routing platform.
                     Computer Engineering student at IAU Mashhad, specializing in
                     <span className="text-white font-semibold text-2xl max-xl:text-base max-md:text-sm top-text"> responsive</span> and
                     <span className="text-white font-semibold text-2xl max-xl:text-base max-md:text-sm top-text"> user-friendly</span> web apps

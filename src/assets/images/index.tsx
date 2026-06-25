@@ -30,6 +30,7 @@ import reactThreeFiber from '@/assets/reactThreeFiber.png';
 import nextJs from '@/assets/nextJs.png';
 import mui from '@/assets/mui.png';
 import whisper from '@/assets/whisper.png';
+import mug from '@/assets/mug.png';
 
 const images = {
     html,
@@ -63,7 +64,8 @@ const images = {
     reactThreeFiber,
     nextJs,
     mui,
-    whisper
+    whisper,
+    mug
 };
 
 export default images;

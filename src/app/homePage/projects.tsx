@@ -17,10 +17,10 @@ const projects = [
     id: 2,
     image: images.certificate,
     link: "https://github.com/asal1922/mapbox-project",
-    title: "Neshoon Routing",
+    title: "Neshan Routing",
     tags: ["Mapbox", "React", "Routing"],
     description:
-      "Ranked among the top 4 programmers out of nearly 700 participants in the Neshoon routing competition, followed by a full-time one-month internship on real routing challenges.",
+      "Ranked among the top 4 programmers out of nearly 700 participants in the Neshan routing competition, followed by a full-time one-month internship on real routing challenges.",
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const projects = [
   },
   {
     id: 4,
-    image: images.myproject,
+    image: images.mug,
     link: "https://mug-configur-torr-3wik122hi-asal1922s-projects.vercel.app/",
     title: "Mug Configurator",
     tags: ["Three.js", "React", "3D", "Customization"],
